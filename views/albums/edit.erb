@@ -1,6 +1,7 @@
 <h1>Edit Album Information</h1>
 
-<form class="album" id="edit-album" method="POST" action="/albums/<%= @album.id %>"></form>
+<form class="album" id="edit-album" method="POST" action="/albums/<%= @album.id %>">
+  <input type="hidden" name="_method" value="PUT">
   <div>
     <label for="album-title">Title:</label>
     <input type="text" name="album[name]" id="album-name">
@@ -27,5 +28,6 @@
   </div>
 
   <div>
-    <input type="Submit" value="Edit Album" class="btn">
+    <input type="submit" value="Save Album" class="btn">
   </div>
+</form>

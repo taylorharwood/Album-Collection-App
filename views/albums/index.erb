@@ -1,4 +1,4 @@
-<h1>Albums</h1>
+<h1>Your Albums</h1>
 
 <ul class="albums">
   <% @albums.each do |album| %>
@@ -6,6 +6,12 @@
     <strong>
       <a href="/albums/<%= album.id %>"><%= album.to_s %></a>
     </strong>
+    <p>
+      <a href="/albums/<%= album.id %>/edit"><button name="edit-album" class="btn edit">Edit Album</button></a>
+      <a href="/albums/<%= album.id %>/delete"><button name="delete-album" class="btn delete">Delete Album</button></a>
+      <a href="http://rateyourmusic.com/search?searchtype=l&searchterm=<%= album.name %>"><button name="reviews-album" class="btn reviews" target="_blank">Album Reviews</button></a>
+    </p>
+
   </li>
   <% end %>
 </ul>
