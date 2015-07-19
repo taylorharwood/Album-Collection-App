@@ -1,3 +1,9 @@
 <a href="/albums">Back to All Albums</a>
 
 <h3><%= @album.to_s %></h3>
+
+<p>
+  <a href="/albums/<%= @album.id %>/edit"><button name="edit-album" class="btn edit">Edit Album</button></a>
+  <a href="/albums/<%= @album.id %>/delete"><button name="delete-album" class="btn delete">Delete Album</button></a>
+  <a href="http://rateyourmusic.com/search?searchtype=l&searchterm=<%= @album.name %>"><button name="reviews-album" class="btn reviews" target="_blank">Album Reviews</button></a>
+</p>

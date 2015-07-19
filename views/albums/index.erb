@@ -6,10 +6,26 @@
     <strong>
       <a href="/albums/<%= album.id %>"><%= album.to_s %></a>
     </strong>
-    <p>
-      <a href="/albums/<%= album.id %>/edit"><button name="edit-album" class="btn edit">Edit Album</button></a>
-      <a href="/albums/<%= album.id %>/delete"><button name="delete-album" class="btn delete">Delete Album</button></a>
-      <a href="http://rateyourmusic.com/search?searchtype=l&searchterm=<%= album.name %>"><button name="reviews-album" class="btn reviews" target="_blank">Album Reviews</button></a>
+
+    <ul class="buttons">
+      <!-- edit album button -->
+      <li class="buttons">
+        <a href="/albums/<%= album.id %>/edit"><button name="edit-album" class="btn edit">Edit Album</button></a>
+      </li>
+
+      <!-- delete button -->
+      <li class="buttons">
+        <form class="album" id="delete-album" method="POST" action="/albums/<%= album.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <a href="/albums/<%= album.id %>/delete"><button name="delete-album" class="btn delete">Delete Album</button></a>
+        </form>
+      </li>
+
+      <!-- get reviews button -->
+      <li class="buttons">
+        <a href="http://rateyourmusic.com/search?searchtype=l&searchterm=<%= album.name %>"><button name="reviews-album" class="btn reviews" target="_blank">Album Reviews</button></a>
+      </li>
+    </ul>
     </p>
 
   </li>
