@@ -1,0 +1,11 @@
+<h1>Albums</h1>
+
+<ul class="albums">
+  <% @albums.each do |album| %>
+  <li>
+    <strong>
+      <a href="/albums/<%= album.id %>"><%= album.to_s %></a>
+    </strong>
+  </li>
+  <% end %>
+</ul>

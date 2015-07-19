@@ -1,0 +1,31 @@
+<h1>Edit Album Information</h1>
+
+<form class="album" id="edit-album" method="POST" action="/albums/<%= @album.id %>"></form>
+  <div>
+    <label for="album-title">Title:</label>
+    <input type="text" name="album[name]" id="album-name">
+  </div
+
+  <div>
+    <label for="album-artist">Artist:</label>
+    <input type="text" name="album[artist]" id="album-artist">
+  </div>
+
+  <div>
+    <label for="album-year">Year:</label>
+    <input type="text" name="album[year]" id="album-year">
+  </div>
+
+  <div>
+    <label for="album-genre">Genre:</label>
+    <input type="text" name="album[genre]" id="album-genre">
+  </div>
+
+  <div>
+    <label for="album-rating">Rating:</label>
+    <input type="text" name="album[rating]" id="album-rating">
+  </div>
+
+  <div>
+    <input type="Submit" value="Edit Album" class="btn">
+  </div>

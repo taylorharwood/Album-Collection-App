@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Album Collection App</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Album Collection App</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/albums">Albums</a></li>
+        <li><a href="/albums/new">Add An Album</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <p>Album Collection App
+      <ul>
+        <li><a href="/">Home | </a></li>
+        <li><a href="/about">About | </a></li>
+        <li><a href="/albums">Albums | </a></li>
+        <li><a href="/albums/new.erb">Add An Album</a></li>
+      </ul>
+    </p>
+  </footer>
+
+</body>
+</html>
