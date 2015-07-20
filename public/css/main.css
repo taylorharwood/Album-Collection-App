@@ -3,6 +3,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
+  color: #333;
+}
+
+h1 {
   color: #3E8C84;
 }
 
@@ -51,7 +55,13 @@ main {
   padding: 10px;
 }
 
+
+.albums li strong {
+  float: left;
+}
+
 ul.albums {
+  padding: 0;
   color: #333;
   text-decoration: none;
   list-style: none;
@@ -63,6 +73,17 @@ ul.albums a {
 }
 
 .buttons {
+  padding: 0;
+  display: inline;
+  float: left;
+}
+
+.buttons form {
+  float: left;
+}
+
+.buttons li {
+  float: left;
   display: inline;
 }
 .btn {
@@ -88,7 +109,12 @@ ul.albums a {
   background-color: #337ab7;
 }
 
+.btn.accept {
+  background-color: #5cb85c;
+}
+
 input {
+  border: 1px solid #555;
   height: 15px;
   padding: 5px;
   border-radius: 5px;
@@ -98,12 +124,11 @@ input {
 
 footer {
   text-align: left;
+  bottom: 0;
   width: 100%;
   background-color: #296B73;
   color: #eee;
   padding: 10px;
-  position: absolute;
-  bottom: 0;
   height: 50px;
 }
 
@@ -125,4 +150,9 @@ footer ul li {
 
 .bottom-nav a {
   color: white;
+}
+
+main {
+  padding: 20px;
+  margin-bottom: 50px;
 }

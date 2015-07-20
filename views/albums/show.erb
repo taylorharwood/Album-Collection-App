@@ -4,6 +4,9 @@
 
 <p>
   <a href="/albums/<%= @album.id %>/edit"><button name="edit-album" class="btn edit">Edit Album</button></a>
-  <a href="/albums/<%= @album.id %>/delete"><button name="delete-album" class="btn delete">Delete Album</button></a>
+  <form action="/albums/<%= @album.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <a href="/albums/<%= @album.id %>/delete"><button name="delete-album" class="btn delete">Delete Album</button></a>
+  </form>
   <a href="http://rateyourmusic.com/search?searchtype=l&searchterm=<%= @album.name %>"><button name="reviews-album" class="btn reviews" target="_blank">Album Reviews</button></a>
 </p>
